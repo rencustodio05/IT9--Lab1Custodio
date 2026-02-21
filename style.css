@@ -1,0 +1,199 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 40px;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Navigation Bar*/
+div[style*="display:flex"] {
+    background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%) !important;
+    padding: 15px 25px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+    margin-bottom: 30px !important;
+    align-items: center;
+    border: 1px solid #2d2d44;
+}
+
+div[style*="display:flex"] a {
+    text-decoration: none;
+    color: #a0a0b0;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+div[style*="display:flex"] a:hover {
+    background-color: #0f3460;
+    color: #e94560;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(233, 69, 96, 0.3);
+}
+
+hr {
+    display: none;
+}
+
+/* Headings */
+h2 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #e94560, #0f3460);
+    border-radius: 2px;
+}
+
+/* List Styling - Modern Cards */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+ul li {
+    background: linear-gradient(145deg, #16213e, #1f1f3a);
+    padding: 25px;
+    border-radius: 12px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #2d2d44;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+}
+
+/* Colorful accent borders for each card */
+ul li:nth-child(1)::before {
+    background: #00d9ff;
+}
+
+/* Clients - Cyan */
+ul li:nth-child(2)::before {
+    background: #ff9f43;
+}
+
+/* Services - Orange */
+ul li:nth-child(3)::before {
+    background: #a55eea;
+}
+
+/* Bookings - Purple */
+ul li:nth-child(4)::before {
+    background: #26de81;
+}
+
+/* Revenue - Green */
+
+ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border-color: #3d3d5c;
+}
+
+ul li span {
+    color: #888;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+ul li b {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Specific colors for numbers */
+ul li:nth-child(1) b {
+    color: #00d9ff;
+}
+
+ul li:nth-child(2) b {
+    color: #ff9f43;
+}
+
+ul li:nth-child(3) b {
+    color: #a55eea;
+}
+
+ul li:nth-child(4) b {
+    color: #26de81;
+}
+
+/* Quick Links Section */
+p {
+    margin-top: 35px;
+    background: linear-gradient(145deg, #16213e, #1f1f3a);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #2d2d44;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #a0a0b0;
+    font-size: 15px;
+}
+
+p a {
+    text-decoration: none;
+    color: #e94560;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 1px solid #e94560;
+}
+
+p a:hover {
+    background-color: #e94560;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+}
+
+/* Subtle glow effect for the page */
+body::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(233, 69, 96, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
