@@ -8,7 +8,7 @@ body {
     min-height: 100vh;
 }
 
-/* Navigation Bar*/
+/* Navigation Bar */
 div[style*="display:flex"] {
     background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%) !important;
     padding: 15px 25px !important;
@@ -62,7 +62,7 @@ h2::after {
     border-radius: 2px;
 }
 
-/* List Styling - Modern Cards */
+/* List Styling - Modern Cards (Dashboard) */
 ul {
     list-style: none;
     padding: 0;
@@ -97,26 +97,10 @@ ul li::before {
 }
 
 /* Colorful accent borders for each card */
-ul li:nth-child(1)::before {
-    background: #00d9ff;
-}
-
-/* Clients - Cyan */
-ul li:nth-child(2)::before {
-    background: #ff9f43;
-}
-
-/* Services - Orange */
-ul li:nth-child(3)::before {
-    background: #a55eea;
-}
-
-/* Bookings - Purple */
-ul li:nth-child(4)::before {
-    background: #26de81;
-}
-
-/* Revenue - Green */
+ul li:nth-child(1)::before { background: #00d9ff; }
+ul li:nth-child(2)::before { background: #ff9f43; }
+ul li:nth-child(3)::before { background: #a55eea; }
+ul li:nth-child(4)::before { background: #26de81; }
 
 ul li:hover {
     transform: translateY(-5px);
@@ -138,21 +122,10 @@ ul li b {
 }
 
 /* Specific colors for numbers */
-ul li:nth-child(1) b {
-    color: #00d9ff;
-}
-
-ul li:nth-child(2) b {
-    color: #ff9f43;
-}
-
-ul li:nth-child(3) b {
-    color: #a55eea;
-}
-
-ul li:nth-child(4) b {
-    color: #26de81;
-}
+ul li:nth-child(1) b { color: #00d9ff; }
+ul li:nth-child(2) b { color: #ff9f43; }
+ul li:nth-child(3) b { color: #a55eea; }
+ul li:nth-child(4) b { color: #26de81; }
 
 /* Quick Links Section */
 p {
@@ -196,4 +169,133 @@ body::before {
     background: radial-gradient(circle, rgba(233, 69, 96, 0.03) 0%, transparent 50%);
     pointer-events: none;
     z-index: -1;
+}
+
+/* =========================================
+   NEW STYLES FOR FORMS AND TABLES 
+   ========================================= */
+
+/* Form Container */
+form {
+    background: linear-gradient(145deg, #16213e, #1f1f3a);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #2d2d44;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 500px; /* Keeps forms from getting too wide */
+    margin-top: 20px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #a0a0b0;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    background-color: #0f1526; /* Slightly darker than card */
+    border: 1px solid #2d2d44;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #e94560;
+    box-shadow: 0 0 8px rgba(233, 69, 96, 0.3);
+}
+
+/* Buttons */
+button[type="submit"],
+input[type="submit"] {
+    background-color: #e94560;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(233, 69, 96, 0.2);
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+    background-color: #d63d56;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(233, 69, 96, 0.4);
+}
+
+/* Table Styles (for clients_list.php) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: linear-gradient(145deg, #16213e, #1f1f3a);
+    border-radius: 12px;
+    overflow: hidden; /* Rounds the corners of the table */
+    border: 1px solid #2d2d44;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+th {
+    background-color: #0f3460;
+    color: #ffffff;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #2d2d44;
+    color: #e0e0e0;
+    font-size: 15px;
+}
+
+/* Remove border from last row */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Hover effect on table rows */
+tr:hover {
+    background-color: #1f2b4d;
+}
+
+/* Links inside the table */
+td a {
+    text-decoration: none;
+    color: #00d9ff;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+td a:hover {
+    background-color: rgba(0, 217, 255, 0.1);
+    border-color: #00d9ff;
+    color: #ffffff;
 }
